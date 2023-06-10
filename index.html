@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Snake Game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large ">Home</a>
+    <a href="#firstgrid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Task 1</a>
+    <a href="#secondgrid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Task 2</a>
+    <a href="#thirdgrid" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Task 3</a>
+    
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#firstgrid" class="w3-bar-item w3-button w3-padding-large">Task 1</a>
+    <a href="#secondgrid" class="w3-bar-item w3-button w3-padding-large">Task 2</a>
+    <a href="#thirdgrid" class="w3-bar-item w3-button w3-padding-large">Task 3</a>
+
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+    <img src="./snakegame.png" style="object-fit:cover">
+  <h1 class="w3-margin w3-jumbo">SNAKE GAME</h1>
+  <p class="w3-xlarge">Basic Snake Game</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"> 
+    <a href="#firstgrid" style="text-decoration:none;">
+        Get Started
+    </a>
+  </button>
+</header>
+
+<!-- First Grid -->
+<section id="firstgrid">
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>First Task: Setting up the board</h1>
+            <h5 class="w3-padding-32">Setting up the board</h5>
+      
+            <p class="w3-text-grey">
+                <ul>
+                    <li>
+                        Let's create a variable named cell_size equals to 40, then a variable named cell_number equals to 20 to make sure out screen's width and height equals to cell_number*cell_size. Fill the screen with a background color of RGB(175, 215, 70), set up the FPS to 60, and name it "game".
+                    </li>
+                    <li>
+                        Next let creat GameObjects. There will be a slight difference here. Instead of declaring variables like "player_img" and "player_rect", we will use a class, constructor, and functions to make our code cleaner.
+                    </li>
+                    <li>
+                        For example, here's the code snippet for declaring a class for the fruit:
+                        
+                        <img src="./class.png">
+                    </li>
+                </ul>
+                <p>Don't worry so much for new syntax coding, I will help you step by step:</p>
+                <ul>
+                    <li>Create a constructor function with the parameter "self", and then create an x and y position for the fruit. Ex: self.x=5 ...</li>
+                    <li>Draw a square representing the fruit.</li>
+                    <li><strong>Learn about Vector 2D in Pygame</strong></li>
+                    <li>Create a function named draw_fruit to represent fruit</li>
+                    <li>Make the fruit appears randomly by using randint.</li>
+                </ul>
+            </p>
+          </div>
+      
+          <div class="w3-third w3-center">
+            <img src="https://opengameart.org/sites/default/files/preview_937.png" width="300" height="200">
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- Second Grid -->
+<section id="secondgrid">
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-third w3-center">
+            <img src="https://w7.pngwing.com/pngs/243/882/png-transparent-green-snake-character-snakes-and-ladders-drawing-snake-game-animals-vertebrate.png" width="300" height="200">
+          </div>
+      
+          <div class="w3-twothird">
+            <h1>Second Task: Creating the Snake</h1>
+            <h5 class="w3-padding-32">The snake works like the fruit. <strong>Except that we store and draw multiple vectors.</strong></h5>
+      
+            <p class="w3-text-grey">
+              <ul>
+                  <li>First, create a class named Snake. It must contain a constructor. Inside the constructor create 3 consecutive  vectors. Ex: Vector2(5,10),Vector2(4,10),Vector2(3,10) </li>
+                  <li>Next, create a function named draw_snake. Inside the function create a for loop to create each block of snake, then draw the rectangle.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+
+<!-- Third Grid -->
+<section id="thirdgrid">
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Third Task: Moving the Snake</h1>
+            <h5 class="w3-padding-32">Similar to the algorithm for moving an enemy to the left, which means when the enemy goes off the screen, we will reset the enemy to the right side. Similarly, for our snake consisting of 3 blocks, to move the snake to the right, we can use the following algorithm:</h5>
+      
+            <p class="w3-text-grey">
+                <ul>
+                    <li>
+                        The head is moved to a new block.
+                    </li>
+                    <li>
+                        The block before the head gets the position where the head used to be.
+                    </li>
+                    <li>
+                       Each block is moved to the positon of the block that used to be before it. (deletes the last block)
+                        
+                       
+                    </li>
+                </ul>
+                <p>To achieve that, you can follow these steps:</p>
+                <ul>
+                    <li>Create a variable called "direction" to represent the movement direction. For example, for moving to the right, you can set the direction vector as (1, 0), indicating movement along the x-axis.</li>
+                    <li>Copy the entire body of the snake, except for the last block.</li>
+                    <li>Add a new block to the beginning of the snake's body list with the value equal to "snake.body[0] + direction".</li>
+                    
+                </ul>
+            </p>
+          </div>
+      
+          <div class="w3-third w3-center">
+            <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2023/03/snake-game-3.jpg" width="300" height="200">
+          </div>
+        </div>
+      </div>
+</section>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">There're still having more things to do with this game. But first try to complete these 3 tasks and move on. </h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <a href="https://www.facebook.com/do.zap.dz" target="_blank">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+</a>
+ </div>
+ <p>Powered by <a href="https://www.facebook.com/do.zap.dz" target="_blank">Do Giap</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
